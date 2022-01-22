@@ -1,6 +1,8 @@
 
 class Board(){
+    //Board class contains useful functions that deal with the game board.
     fun createBoard(boardPieces: MutableList<Char>){
+        //The createBoard function takes a list as input and then creates a game board displaying all the pieces.
         println("\n Tic Tac Toe \n")
         println("Player 1 (X)  -  Player 2 (O)")
         println("     |     |     ")
@@ -14,6 +16,7 @@ class Board(){
         println("     |     |     ")
     }
     fun checkWin(boardPieces: MutableList<Char>, player: Char): Char{
+        //This function checks to see if a player has won the game by evaluating multiple expressions.
         var playerWin = 'n'
         var testForTie = 0
 
@@ -54,6 +57,8 @@ class Board(){
 
             for(i in 0..8)
             {
+                //If none of the winning conditions are met then each time the program sees an occupied board spot in increases the testForTie count.
+                // When it is equal to the number of board spots without finding a winner then the game is a tie.
                 if(boardPieces[i] == 'x' || boardPieces[i] == 'o' || boardPieces[i] == 'X' || boardPieces[i] == 'O')
                 {
                     testForTie++
@@ -88,7 +93,9 @@ class Board(){
     }
 }
 class Player(){
+    //Player class holds useful functions regarding the players of the tictactoe game.
     fun getMove(boardPieces: MutableList<Char>, player: Char){
+        //the getMove function determines whose move it is and then modifies the game board data to hold that move.
         var playerMoveFound = false
         var playerTurn = '0'
         var playerMove = '0'
@@ -102,7 +109,7 @@ class Player(){
 
             playerMove = move
             for (i in 0..8){
-                if(playerMove == boardPieces[i] && playerMove != 'X' && playerMove != 'O' && playerMove != 'x' && playerMove != 'o')
+                if(playerMove == boardPieces[i] && playerMove != 'X' && playerMove != 'O' && playerMove != 'x' && playerMove != 'o')//Checks to see that there isn't already a game piece in that spot.
                 {
                      boardPieces[i] = player
 
@@ -115,6 +122,7 @@ class Player(){
         }
     }
     fun togglePlayer(player: Char):Char{
+        //A function to switch between players.
         var player = player
         if (player == 'X'){
             player = 'O'
@@ -123,6 +131,7 @@ class Player(){
         return(player)
     }
     fun getUserPlay():Boolean{
+        //Find out if the user wants to continue playing the game.
         var response:Char
         var invalidResponse = true
         var play = false
