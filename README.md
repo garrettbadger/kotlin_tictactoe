@@ -6,11 +6,9 @@ This repository cotains a simple tictactoe program written in the Kotlin languag
 
 This program demonstrates the basics of the language. It uses things like mutable and immutable variables, it shows functions, classes, conditional expressions, and loops.
 
-{Describe your purpose for writing this software.}
+This video contains a brief overview of my project and the reason why I decided to create it. 
 
-{Provide a link to your YouTube demonstration.  It should be a 4-5 minute demo of the software running and a walkthrough of the code.  Focus should be on sharing what you learned about the language syntax.}
-
-[Software Demo Video](http://youtube.link.goes.here)
+[Software Demo Video](https://youtu.be/ZUj7QYTKSGw)
 
 # Development Environment
 
@@ -20,7 +18,7 @@ openjdk-17.0.1
 
 # Useful Websites
 
-{Make a list of websites that you found helpful in this project}
+
 * [Kotlin Language](https://kotlinlang.org/)
 * [Code Academy](https://www.codecademy.com/learn/learn-kotlin)
 
